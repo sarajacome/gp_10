@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>p11_poetry</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #dfdfdf;
+    }
+    .container {
+        text-align: left;
+        white-space: nowrap;
+        font-size: 24px;
+        display: inline-block;
+    }
+    .row_1 {
+        margin-left: -55px;
+     
+    }
+    .row_2, .row_3 {
+        animation: color 1s ease-in-out infinite alternate;
+      
+    }
+    @keyframes color {
+    from {color: black;}
+    to {color: #dfdfdf}
+    0% {
+        transform: translateX(0);
+      }
+    100% {
+        transform: translateX(-5px);
+      }
+    }
+    .row_4 {
+     margin-left: 114px;
+    }
+    span:nth-child(odd) {
+      animation-delay: 3s; 
+    }
+   span{
+    animation-name: bounce;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    }
+    @keyframes bounce {
+        0%, 100% {
+        transform: translateY(10px);
+      }
+      50% {
+        transform: translateY(0px);
+    }
+    }
+    span:first-child{
+            transition-timing-function: ease;
+            padding: 0;
+            transition: padding 5s;  
+        }
+    span:hover{
+        padding-right: 10em;
+        color: red;
+       
+    }
+    .row_1, .row_4 {
+        animation: izquierda 1s  ease-in-out infinite alternate;
+    }
+    @keyframes izquierda {
+      0%, 100% {
+        transform: translateY(10px);
+      }
+      50% {
+        transform: translateY(0px);
+    }
+    }
+    .ball{
+        width: 15px;
+        height: 15px;
+        background-color: black;
+        border-radius: 50%;
+        position: absolute;
+        animation-name: ball;
+        animation-duration: 0.5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        margin-top: -140px;
+        margin-left: 200px;
+    }
+    @keyframes ball{
+        from{ 
+            transform: translateY(100px);
+        }
+        to{
+            transform: translateY(40px);
+        }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row_1">
+      <span>ping</span> <span>pong</span>
+    </div>
+    <div class="row_2">
+      <span>ping</span> <span>pong</span> <span>ping</span>
+    </div>
+    <div class="row_3">
+      <span>pong</span> <span>ping</span> <span>pong</span>
+    </div>
+    <div class="row_4">
+      <span>ping</span> <span>pong</span>
+    </div>
+    <div class="ball"></div>
+  </div>
+</audio>
+</body>
+</html>
